@@ -3,6 +3,12 @@ const cors = require('cors');
 require('dotenv').config();
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const port = process.env.PORT || 5000;
+
+
+app.use(cors({
+  origin: 'https://keen-daifuku-7587ea.netlify.app/', // Your frontend domain
+  methods: 'GET,POST,PUT,DELETE',
+}));
 const app = express();
 // middleware
 app.use(cors());
@@ -28,7 +34,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
 
-    await client.connect();
+    
     // Connect the client to the server	(optional starting in v4.7)
     const itemCollection = client.db('glow').collection('product');
 
