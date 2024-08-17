@@ -8,7 +8,7 @@ app.use(express.json())
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://glow:i78uYwm8nl0w1eqQ@cluster0.ld1lprp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://DB_USER:DB_PASSQ@cluster0.ld1lprp.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 
 
